@@ -1,0 +1,130 @@
+{
+ "type": {
+  "name": "Meals",
+  "kind": "Meal",
+  "indexName": "meals",
+  "fields": [
+   {
+    "id": "id",
+    "name": "Id",
+    "fieldType": "INT64"
+   },
+   {
+     "id": "userId",
+     "name": "User",
+     "fieldType": "REFERENCE",
+     "referenceValue": {
+       "kind": "User",
+       "refType": "INT64"
+     }
+   },
+   {
+     "id": "typeId",
+     "name": "Type",
+     "fieldType": "REFERENCE",
+     "referenceValue": {
+       "kind": "MealType",
+       "refType": "INT64"
+     }
+   },
+   {
+    "id": "date",
+    "name": "Date",
+    "fieldType": "DATE"
+   },
+   {
+    "id": "time",
+    "name": "Time",
+    "fieldType": "INT64"
+   },
+   {
+    "id": "amount",
+    "name": "Number of calories",
+    "fieldType": "INT64"
+   },
+   {
+    "Id": "description",
+    "name": "Description",
+    "fieldType": "STRING"
+   }
+  ]
+ },
+ "listView": {
+  "title": "Meals",
+  "sort": "-date",
+  "columns": [
+   {
+    "id": "date",
+    "width": "20%",
+    "sortable": true,
+    "function": "human_date"
+   },
+   {
+    "id": "time",
+    "width": "10%",
+    "sortable": true,
+    "function": "human_time"
+   },
+   {
+    "id": "description",
+    "width": "20%",
+    "sortable": true
+   },
+   {
+    "id": "type",
+    "width": "20%",
+    "path": "typeId.name"
+   },
+   {
+    "id": "amount",
+    "width": "15%",
+    "sortable": true,
+    "align": "right"
+   },
+   {
+    "id": "username",
+    "width": "15%",
+    "path": "userId.username"
+   }
+  ]
+ },
+ "editView": {
+   "widgets": [
+    {
+     "id": "description",
+     "title": "Description",
+     "type": "TEXT_BOX",
+     "width": "100%"
+    },
+    {
+      "id": "typeId",
+      "title": "Type",
+      "type": "LIST_BOX",
+      "width": "50%",
+      "dataSource": {
+        "emptyRow": true,
+        "columnName": "name",
+        "kind": "MealType"
+      }
+    },
+    {
+     "id": "amount",
+     "title": "Number of calories",
+     "type": "TEXT_BOX_NUMBER",
+     "width": "20%"
+    },
+    {
+     "id": "date",
+     "title": "Date",
+     "type": "TEXT_BOX_DATE",
+     "defaultValue": "Now()"
+    },
+    {
+     "id": "time",
+     "title": "Time",
+     "type": "TEXT_BOX_TIME",
+     "defaultValue": "Now()"
+    }
+   ]
+ }
+}

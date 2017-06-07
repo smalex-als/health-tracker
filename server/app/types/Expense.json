@@ -1,0 +1,125 @@
+{
+ "type": {
+  "name": "Expenses",
+  "kind": "Expense",
+  "indexName": "expenses",
+  "fields": [
+   {
+    "id": "id",
+    "name": "Id",
+    "fieldType": "INT64"
+   },
+   {
+     "id": "userId",
+     "name": "User",
+     "fieldType": "REFERENCE",
+     "referenceValue": {
+       "kind": "User",
+       "refType": "INT64"
+     }
+   },
+   {
+     "id": "typeId",
+     "name": "Type",
+     "fieldType": "REFERENCE",
+     "referenceValue": {
+       "kind": "ExpenseType",
+       "refType": "INT64"
+     }
+   },
+   {
+    "id": "date",
+    "name": "Date",
+    "fieldType": "DATE"
+   },
+   {
+    "id": "amount",
+    "name": "Amount",
+    "fieldType": "FLOAT64"
+   },
+   {
+    "Id": "description",
+    "name": "Description",
+    "fieldType": "STRING"
+   },
+   {
+    "id": "comment",
+    "name": "Comment",
+    "fieldType": "STRING"
+   }
+  ]
+ },
+ "listView": {
+  "title": "Expenses",
+  "sort": "-date",
+  "columns": [
+   {
+    "id": "date",
+    "width": "20%",
+    "sortable": true,
+    "function": "human_time"
+   },
+   {
+    "id": "description",
+    "width": "25%",
+    "sortable": true
+   },
+   {
+    "id": "type",
+    "width": "20%",
+    "path": "typeId.name"
+   },
+   {
+    "id": "amount",
+    "width": "15%",
+    "sortable": true,
+    "function": "human_float",
+    "align": "right"
+   },
+   {
+    "id": "username",
+    "width": "20%",
+    "path": "userId.username"
+   }
+  ]
+ },
+ "editView": {
+   "widgets": [
+    {
+     "id": "description",
+     "title": "Description",
+     "type": "TEXT_BOX",
+     "width": "100%"
+    },
+    {
+      "id": "typeId",
+      "title": "Type",
+      "type": "LIST_BOX",
+      "width": "50%",
+      "dataSource": {
+        "emptyRow": true,
+        "columnName": "name",
+        "kind": "ExpenseType"
+      }
+    },
+    {
+     "id": "amount",
+     "title": "Amount",
+     "type": "TEXT_BOX_NUMBER",
+     "width": "20%"
+    },
+    {
+     "id": "date",
+     "title": "Date",
+     "type": "TEXT_BOX_DATETIME",
+     "defaultValue": "Now()"
+    },
+    {
+     "id": "comment",
+     "title": "Comment",
+     "type": "TEXT_BOX",
+     "width": "100%"
+    }
+   ]
+ }
+}

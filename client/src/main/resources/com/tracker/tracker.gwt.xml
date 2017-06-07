@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='tracker'>
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <inherits name='com.google.gwt.user.User' />
+  <inherits name="com.google.gwt.json.JSON"/>
+  <inherits name="com.google.gwt.logging.Logging"/>
+  <inherits name="com.google.gwt.activity.Activity"/>
+  <inherits name="com.google.gwt.i18n.I18N"/>
+  <inherits name="elemental.Elemental"/>
+  <inherits name="com.googlecode.jatl.Html"/>
+
+
+  <!-- Other module inherits                                      -->
+  <set-property name="gwt.logging.enabled" value="TRUE"/>
+  <set-property name="gwt.logging.logLevel" value="FINE"/>
+  <set-property name="gwt.logging.consoleHandler" value="ENABLED" />
+  <set-property name="gwt.logging.systemHandler" value="DISABLED" />
+
+  <!-- Specify the app entry point class.                         -->
+  <entry-point class='com.tracker.client.TrackerEntryPoint' />
+
+  <!-- Specify the paths for translatable code                    -->
+  <source path='client' />
+  <source path='shared' />
+  <set-configuration-property name="devModeUrlWhitelistRegexp" value="http://(micro|192\.168\.1\.203)(:\d+)?/.*" />
+
+</module>

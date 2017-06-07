@@ -1,0 +1,149 @@
+{
+ "type": {
+  "name": "Users",
+  "kind": "User",
+  "indexName": "users",
+  "fields": [
+   {
+    "id": "id",
+    "name": "Id",
+    "fieldType": "INT64"
+   },
+   {
+    "id": "email",
+    "name": "Email",
+    "fieldType": "STRING"
+   },
+   {
+    "id": "username",
+    "name": "Username",
+    "fieldType": "STRING"
+   },
+   {
+    "id": "newPassword",
+    "name": "New password",
+    "fieldType": "STRING"
+   },
+   {
+    "id": "enabled",
+    "name": "Enabled",
+    "fieldType": "BOOL"
+   },
+   {
+    "id": "emailConfirmed",
+    "name": "Email Confirmed",
+    "fieldType": "BOOL"
+   },
+   {
+    "id": "numberCalories",
+    "name": "Number of calories",
+    "fieldType": "INT"
+   },
+   {
+     "id": "roleId",
+     "name": "Role",
+     "fieldType": "REFERENCE",
+     "referenceValue": {
+       "kind": "Role",
+       "refType": "INT64"
+     }
+   },
+   {
+    "id": "created",
+    "name": "Created",
+    "fieldType": "DATE"
+   },
+   {
+    "id": "lastVisit",
+    "name": "Last visit",
+    "fieldType": "DATE"
+   }
+  ]
+ },
+ "listview": {
+  "title": "users",
+  "sort": "created",
+  "columns": [
+   {
+    "id": "username",
+    "width": "20%",
+    "sortable": true
+   },
+   {
+    "id": "role",
+    "width": "15%",
+    "path": "roleId.name"
+   },
+   {
+    "id": "email",
+    "width": "20%",
+    "sortable": true
+   },
+   {
+    "id": "enabled",
+    "width": "15%",
+    "sortable": true
+   },
+   {
+    "id": "created",
+    "width": "15%",
+    "sortable": true,
+    "function": "human_datetime"
+   },
+   {
+    "id": "lastVisit",
+    "width": "15%",
+    "sortable": true,
+    "function": "human_datetime"
+   }
+  ]
+ },
+ "editView": {
+   "widgets": [
+    {
+     "id": "username",
+     "title": "Username",
+     "type": "TEXT_BOX",
+     "width": "100%"
+    },
+    {
+     "id": "email",
+     "title": "Email",
+     "type": "TEXT_BOX",
+     "width": "100%"
+    },
+    {
+     "id": "newPassword",
+     "title": "Change password",
+     "type": "TEXT_BOX",
+     "width": "100%"
+    },
+    {
+      "id": "roleId",
+      "title": "Role",
+      "type": "LIST_BOX",
+      "width": "50%",
+      "dataSource": {
+        "emptyRow": true,
+        "columnName": "Name",
+        "kind": "Role"
+      }
+    },
+    {
+     "id": "numberCalories",
+     "title": "Number of calories",
+     "type": "TEXT_BOX_NUMBER"
+    },
+    {
+     "id": "enabled",
+     "title": "Enabled",
+     "type": "TEXT_BOX_CHECKBOX"
+    },
+    {
+     "id": "emailConfirmed",
+     "title": "Email confirmed",
+     "type": "TEXT_BOX_CHECKBOX"
+    }
+   ]
+ }
+}

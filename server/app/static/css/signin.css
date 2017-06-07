@@ -1,0 +1,164 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.container {
+  margin: 40px auto 0; 
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.no-records-found {
+  margin: 20px auto 0; 
+}
+
+.search-component {
+  margin-bottom: 20px; 
+  max-width: 630px;
+}
+
+.sign-in-up-container .border-left-md {
+  border-left: solid thin #a0a0a0;
+}
+
+@media (max-width: 768px) {
+  .sign-in-up-container .border-left-md {
+    border: none;
+    margin-top: 25px; 
+  } 
+}
+
+.sign-in-up-container > .row {
+  max-width: 806px;
+  margin: 40px auto 0; 
+}
+
+@media (max-width: 768px) {
+  .sign-in-up-container > .row { max-width: 430px; } 
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.table tr {
+  cursor: pointer;
+}
+
+.alert-fixed {
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  width: 100%;
+  z-index:9999;
+  border-radius:0px
+}
+
+.navbar-login
+{
+  width: 305px;
+  padding: 10px;
+  padding-bottom: 0px;
+}
+
+.navbar-login-session
+{
+  padding: 10px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+.icon-size
+{
+  font-size: 87px;
+}
+
+
+#progress {
+  position: fixed;
+  z-index: 2147483647;
+  top: 0;
+  left: -6px;
+  width: 1%;
+  height: 2px;
+  background: #0088CC;
+}
+
+#progress.start {
+  width: 1%;
+  opacity: 0.0;
+  transition: opacity 0.1s linear 0.1s, width 0.0s linear 0.2s;
+}
+
+#progress.finish {
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
+  opacity: 0.6;
+  -moz-transition: width 800ms ease-out,opacity 400ms linear;
+  -ms-transition: width 800ms ease-out,opacity 400ms linear;
+  -o-transition: width 800ms ease-out,opacity 400ms linear;
+  -webkit-transition: width 1000ms ease-out,opacity 400ms linear;
+  transition: width 800ms ease-out,opacity 400ms linear;
+  width: 101%;
+  transition-delay: 200ms;
+}
+
+#progress dd, #progress dt {
+  position: absolute;
+  top: 0;
+  height: 2px;
+  -moz-box-shadow: #0088CC 1px 0 6px 1px;
+  -ms-box-shadow: #0088CC 1px 0 6px 1px;
+  -webkit-box-shadow: #0088CC 1px 0 6px 1px;
+  box-shadow: #0088CC 1px 0 6px 1px;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+
+#progress dt {
+  opacity: .6;
+  width: 180px;
+  right: -80px;
+  clip: rect(-6px,90px,14px,-6px);
+}
+
+#progress dd {
+  opacity: .6;
+  width: 20px;
+  right: 0;
+  clip: rect(-6px,22px,14px,10px);
+}
