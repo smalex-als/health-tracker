@@ -1,6 +1,6 @@
 workspace:
   base: /go
-  path: src/github.com/smalex-als/health-tracker/server
+  path: src/github.com/smalex-als/health-tracker
 
 pipeline:
   backend:
