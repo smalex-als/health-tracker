@@ -4,7 +4,7 @@ workspace:
 
 pipeline:
   build: 
-    image: smalex69/appengine_golangxxxx:1.7
+    image: docker.io/smalex69/appengine_golang:1.8
     commands: 
       - go get -u github.com/gin-gonic/gin
       - go get -u google.golang.org/appengine
