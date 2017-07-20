@@ -4,11 +4,11 @@ workspace:
 
 pipeline:
   backend:
-    image: golang
+    image: smalex69/appengine_golang:1.7
     commands: 
       - go get -u github.com/gin-gonic/gin
       - go get -u google.golang.org/appengine
       - go get -u github.com/dgrijalva/jwt-go
       - go get -u github.com/dustin/go-humanize
+      - go build github.com/smalex-als/health-tracker/server/app/
       - go test -cover $(go list ./...)
-      - sh .drone.sh

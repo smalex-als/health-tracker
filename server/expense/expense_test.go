@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/smalex-als/expense-tracker/server/apptest"
+	"github.com/smalex-als/health-tracker/server/apptest"
 	"github.com/smalex-als/health-tracker/server/common"
 	"github.com/smalex-als/health-tracker/server/dao"
 

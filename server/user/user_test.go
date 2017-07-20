@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/gin-gonic/gin"
-	"github.com/smalex-als/expense-tracker/server/apptest"
+	"github.com/smalex-als/health-tracker/server/apptest"
 	"github.com/smalex-als/health-tracker/server/common"
 	"google.golang.org/appengine"
 	"google.golang.org/appengine/aetest"

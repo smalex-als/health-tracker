@@ -3,10 +3,10 @@ package app
 import (
 	"net/http"
 
-	"github.com/smalex-als/expense-tracker/server/common"
-	"github.com/smalex-als/expense-tracker/server/expense"
-	"github.com/smalex-als/expense-tracker/server/meal"
-	"github.com/smalex-als/expense-tracker/server/user"
+	"github.com/smalex-als/health-tracker/server/common"
+	"github.com/smalex-als/health-tracker/server/expense"
+	"github.com/smalex-als/health-tracker/server/meal"
+	"github.com/smalex-als/health-tracker/server/user"
 
 	"github.com/gin-gonic/gin"
 	"google.golang.org/appengine"
