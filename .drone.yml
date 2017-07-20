@@ -3,7 +3,7 @@ workspace:
   path: src/github.com/smalex-als/health-tracker
 
 pipeline:
-  backend:
+  test:
     image: smalex69/appengine_golang:1.7
     dockerfile: Dockerfile
     commands: 
