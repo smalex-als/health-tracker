@@ -3,7 +3,6 @@ package common
 import (
 	"crypto/rsa"
 	"io/ioutil"
-	"os"
 	"time"
 
 	"google.golang.org/appengine/log"
@@ -28,11 +27,11 @@ const (
 var tokenParser TokenParser
 
 func init() {
-	if _, err := os.Stat(privKeyPath); os.IsNotExist(err) {
-		tokenParser = NewTokenParserString([]byte("helloworld"))
-	} else {
-		tokenParser = NewTokenParserKeys()
-	}
+	// if _, err := os.Stat(privKeyPath); os.IsNotExist(err) {
+	tokenParser = NewTokenParserString([]byte("helloworld"))
+	// } else {
+	// 	tokenParser = NewTokenParserKeys()
+	// }
 }
 
 const tokenParserKey = "tokenParser"
